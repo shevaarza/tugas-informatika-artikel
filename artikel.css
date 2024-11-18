@@ -1,0 +1,307 @@
+body {
+    background-color: #2c2f33; /* Warna abu-abu gelap tidak terlalu gelap */
+    color: white;
+      font-family: Arial, sans-serif,georgia;
+      margin: 0;
+      padding: 0    ;
+    }
+    
+    
+  /* Style untuk Background Video */
+  #background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Posisikan di belakang konten */
+  }
+  
+  .hero {
+    position: relative;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   
+    overflow: hidden;
+  }
+  
+    
+    .hero h1 {
+      margin-top: 180px;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    
+    .hero p {
+      font-size: 1.5rem;
+    }
+    
+    /* Navbar style */
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    
+    .navbar .nav-link {
+      color: white !important;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    
+    .navbar-brand {
+      color: white !important;
+      font-size: 35px;
+    }
+    
+    .navbar-toggler {
+      border-color: white;
+    }
+    
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    
+    .nav-btn {
+      background-color: #ff5722;
+      color: white;
+      border-radius: 20px;
+      padding: 0.5rem 1.5rem;
+    }
+    
+    .nav-btn:hover {
+      background-color: #e64a19;
+    }
+
+    /* Gaya khusus untuk dropdown */
+  .dropdown-menu.custom-dark {
+  background-color: #343a40; /* Warna latar belakang gelap */
+  color: #ffffff;            /* Warna teks terang */
+  }
+
+  .dropdown-menu.custom-dark .dropdown-item {
+  color: #ffffff;
+  }
+
+  .dropdown-menu.custom-dark .dropdown-item:hover {
+  background-color: #495057; /* Warna saat item di-hover */
+  }
+
+  
+  
+    /* Responsif untuk layar kecil */
+  @media (max-width: 576px) {
+      /* Hero section di layar kecil */
+      .hero h1 {
+          font-size: 2.5rem; /* Mengurangi ukuran font pada layar kecil */
+      }
+  
+      .hero p {
+          font-size: 1.2rem; /* Mengurangi ukuran font pada deskripsi */
+      }
+  
+      /* Navbar brand ukuran lebih kecil */
+      .navbar-brand {
+          font-size: 1.5rem;
+      }
+  
+      /* Navbar link ukuran lebih kecil */
+      .navbar .nav-link {
+          font-size: 1rem;
+      }
+  
+      /* Tombol navigasi ukuran lebih kecil */
+      .nav-btn {
+          padding: 0.4rem 1.2rem;
+          font-size: 0.9rem;
+      }
+  
+      /* Hero section padding agar tidak terlalu rapat */
+      .hero {
+          padding: 20px;
+      }
+  }
+  
+
+   /* style artikel */
+   .article-content {
+    padding: 20px;
+  }
+  .article-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+  }
+  .article-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .article-card {
+    background-color: #343a40; /* Warna latar belakang gelap */
+    color: #ffffff;            /* Warna teks putih */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.article-card:hover {
+    transform: scale(1.03);
+}
+
+.article-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.article-card-img:hover {
+    opacity: 0.8; /* Sedikit redup saat di-hover */
+}
+
+.article-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin: 15px;
+}
+
+.article-card-text {
+    font-size: 17px;
+    color: #d3d3d3; /* Warna teks lebih terang */
+    margin: 15px;
+}
+.image-artikel {
+    width: 100%; /* Sesuaikan dengan lebar kontainer */
+   max-width: 400px;/* Maksimal lebar */
+    border-radius: 10px; /* Buat sudut gambar membulat */
+    transition: transform 0.3s ease; /* Efek saat gambar disentuh/hover */
+    margin: 20px auto; /* Tengah-kan gambar dengan margin */
+
+  }
+
+  .container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  /* Footerrr */
+
+
+  .services-section h2 {
+    color: #6BBE45; /* Green color for the "Features Services" */
+  }
+  
+  .service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-icon {
+    width: 50px;
+  }
+  
+  .service-link {
+    color: #6BBE45;
+    font-size: 1.5rem;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+  
+  .service-link:hover {
+    color: #1D8439;
+  }
+  footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  .text-footer{
+    text-decoration: none;
+  }
+  .footer-logo {
+    max-width: 144px; /* Atur ukuran maksimum logo */
+    height: auto;     /* Pastikan proporsi logo tetap */
+    margin-bottom: 20px; /* Ruang di bawah logo */
+    margin-left: 30px;
+    margin-top: -12px;
+}
+
+  
+  .social-icons a {
+    font-size: 1.25rem;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #6BBE45;
+  }
+
+
+  .social-icon {
+    color: #ffffff;
+    font-size: 23px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 5px;
+  }
+  /* Spasi untuk teks link */
+  .text-footer {
+    padding-left: 10px;
+  }
+
+
+
+  
+  footer .form-control {
+    border-radius: 30px;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .footer-link {
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: #ffffff; /* Warna link diatur menjadi putih (atau warna terang) */
+    transition: color 0.3s ease; /* Menambahkan transisi halus pada perubahan warna */
+}
+
+.footer-link:hover {
+    color: #ddd; /* Ubah warna saat link di-hover menjadi abu-abu terang */
+}
+
+.footer-link:active {
+    color: #bbb; /* Saat link diklik, warnanya akan sedikit lebih gelap */
+}
+
+.footer-link:focus {
+    outline: none; /* Menghilangkan outline saat link mendapat fokus */
+    color: #ddd; /* Warnanya tetap berubah saat fokus */
+}
+
+
+
+.bg-light {
+    background-color: #3c3f43 !important; /* Warna abu-abu lebih terang */
+    color: white;
+}
+
+.text-light {
+    color: #f1f1f1 !important;
+}
+

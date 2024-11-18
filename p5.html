@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Informatika</title>
+    <link rel="stylesheet" href="../tugas-informatika/plugin/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../tugas-informatika/plugin/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="artikel.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="logo-smanda.png" alt="Shevaarza Logo" style="height: 40px; margin-right: 8px;">
+            Shevaarza
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+              </li>
+            
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Project
+                </a>
+                <ul class="dropdown-menu custom-dark">
+                    <li><a class="dropdown-item" href="buzzer.html">Project Buzzer</a></li>
+                    <li><a class="dropdown-item" href="servo.html">Project Servo</a></li>
+                    <li><a class="dropdown-item" href="traffic-light.html">Project Traffic Light </a></li>
+                </ul>
+              </li>     
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Informatika
+                </a>
+                <ul class="dropdown-menu custom-dark">
+                  <li><a class="dropdown-item" href="Bab1.html">BAB 1</a></li>
+                  <li><a class="dropdown-item" href="bab2.html">BAB 2</a></li>
+                  <li><a class="dropdown-item" href="bab3.html">BAB 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tentang.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">P5 </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+      <!-- Hero Section -->
+      <!-- Hero Section dengan Background Video -->
+    <div class="hero">
+    <video autoplay muted loop id="background-video">
+      <source src="hero-web.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="container text-center text-light d-flex flex-column justify-content-center align-items-center h-100"> 
+      <h1 class="display-4">Tugas Informatika</h1>
+      <p class="lead">Shevaarza | Kelas 12 C1</p>
+    </div>
+    </div>
+
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+              <!-- Kolom Artikel -->
+              <div class="col-md-8">
+                <div class="article-content">
+                  <h1 class="m-3">Project P5 membuat jemuran otomatis </h1>
+                  <h1 class="text-center mb-4">Jemuran Otomatis</h1>
+
+                  <h3>Alat dan Bahan Jemuran Otomatis</h3>
+                  <ul>
+                    <li><b>Arduino Uno</b>: Arduino adalah mikrokontroler yang berfungsi sebagai "otak" dari sistem jemuran otomatis. Alat ini akan menerima data dari sensor hujan dan remote IR, kemudian menggerakkan motor servo untuk membuka atau menutup jemuran sesuai kondisi cuaca.</li>
+                    <li><b>Sensor Hujan</b>: Sensor ini mendeteksi kehadiran air hujan. Saat mendeteksi air, sensor akan mengirimkan sinyal ke Arduino untuk mengaktifkan proses penutupan jemuran secara otomatis.</li>
+                    <li><b>Servo Motor</b>: Servo digunakan untuk menggerakkan atap jemuran otomatis. Motor ini mengatur posisi jemuran (membuka atau menutup) sesuai instruksi dari Arduino.</li>
+                    <li><b>Remote Infrared (IR) dan IR Receiver</b>: Remote digunakan untuk mengontrol jemuran secara manual, misalnya untuk membuka atau menutup jemuran atau mengatur kondisi lampu taman.</li>
+                    <li><b>LED dan Resistor</b>: LED sebagai indikator status pada sistem jemuran, seperti warna merah untuk menandakan kondisi hujan dan hijau untuk cuaca cerah.</li>
+                    <li><b>LCD (Liquid Crystal Display)</b>: LCD menampilkan status sistem jemuran seperti "Hujan datang," "Tutup atap bro," dan informasi lain terkait kondisi jemuran.</li>
+                    <li><b>Baterai atau Sumber Daya Listrik</b>: Digunakan untuk memasok daya pada Arduino dan komponen lainnya.</li>
+                  </ul>
+              
+                  <h3>Pengertian dan Kegunaan Jemuran Otomatis</h3>
+                  <p>Jemuran otomatis adalah sistem elektronik yang memanfaatkan sensor, motor, dan mikrokontroler untuk melindungi jemuran dari hujan secara otomatis. Tujuan utama dari sistem ini adalah menjaga pakaian agar tetap kering saat hujan dan tetap membuka jemuran ketika cuaca cerah. Sistem ini dirancang agar dapat bekerja secara otomatis dengan bantuan sensor atau melalui kontrol manual menggunakan remote.</p>
+              
+                  <h3>Cara Kerja Jemuran Otomatis</h3>
+                  <ol>
+                    <li><b>Deteksi Cuaca</b>: Ketika sensor hujan mendeteksi air, sensor akan mengirim sinyal ke Arduino. Arduino kemudian mengaktifkan LED merah sebagai tanda bahwa hujan telah terdeteksi.</li>
+                    <li><b>Gerakan Jemuran</b>: Arduino akan mengirim perintah ke motor servo untuk menggerakkan atap jemuran ke posisi menutup, sehingga jemuran terlindungi dari hujan.</li>
+                    <li><b>Kontrol Manual</b>: Pengguna dapat menggunakan remote IR untuk membuka atau menutup jemuran secara manual jika diperlukan. Remote juga dapat mengontrol pencahayaan di sekitar jemuran, seperti mengaktifkan atau mematikan lampu taman.</li>
+                    <li><b>Tampilan Status</b>: LCD akan menampilkan informasi tentang status jemuran, seperti "Hujan datang," "Tutup atap," atau "Tidak ada perintah" ketika tidak ada aksi yang dideteksi.</li>
+                  </ol>
+
+                  
+                  <h4>Contoh Program Servo Arduino</h4>
+                  <p><b>Contoh 1:</b> Menggerakkan Servo pada Sudut Tertentu</p>
+                  <pre><code>
+#include <Servo.h> // Memanggil library servo
+
+Servo myServo; // Mendeklarasikan servo dengan nama myServo
+
+void setup() {
+  myServo.attach(9); // Menghubungkan servo ke pin digital 9
+}
+
+void loop() {
+  myServo.write(0);   // Menggerakkan servo ke 0 derajat
+  delay(1000);        // Menunggu 1 detik
+  myServo.write(90);  // Menggerakkan servo ke 90 derajat
+  delay(1000);        // Menunggu 1 detik
+  myServo.write(180); // Menggerakkan servo ke 180 derajat
+  delay(1000);        // Menunggu 1 detik
+}
+                  </code></pre>
+
+                  <p><b>Contoh 2:</b> Menggerakkan Servo dengan Potensiometer</p>
+                  <pre><code>
+#include <Servo.h>
+
+Servo myServo;  // Membuat objek servo
+int potPin = A0;  // Pin potensiometer terhubung ke A0
+
+void setup() {
+  myServo.attach(9);  // Menghubungkan servo ke pin 9
+}
+
+void loop() {
+  int potValue = analogRead(potPin);        // Membaca nilai potensiometer (0-1023)
+  int angle = map(potValue, 0, 1023, 0, 180); // Mengonversi nilai ke sudut (0-180)
+  myServo.write(angle);                     // Mengatur sudut servo sesuai nilai potensiometer
+  delay(15);                                // Menunggu sedikit untuk pergerakan servo
+}
+                  </code></pre>
+
+                  <h4>Tips Menggunakan Servo dengan Arduino</h4>
+                  <ul>
+                    <li>Pastikan catu daya (VCC) sesuai spesifikasi servo. Umumnya servo membutuhkan daya 5V-6V.</li>
+                    <li>Jangan terlalu sering menggerakkan servo pada sudut-sudut ekstrem (0° atau 180°) karena dapat menyebabkan kerusakan jika servo berusaha untuk melampaui sudut tersebut.</li>
+                    <li>Jika proyek Anda menggunakan banyak servo, gunakan sumber daya eksternal agar tidak membebani Arduino.</li>
+                  </ul>
+
+                  <h4>Aplikasi Servo Motor</h4>
+                  <ul>
+                    <li>Lengan robot: Untuk menggerakkan sendi-sendi robot secara presisi.</li>
+                    <li>Kamera Pan-Tilt: Mengatur arah kamera untuk menangkap sudut pandang berbeda.</li>
+                    <li>Pengendali Pintu: Membuka dan menutup pintu otomatis, seperti pada mesin antrean atau alat pertanian.</li>
+                  </ul>
+                  <p><b>Kesimpulan:</b> Menggunakan servo dengan Arduino cukup mudah dan bisa dilakukan dengan beberapa baris kode sederhana. Dengan servo, kita dapat membuat berbagai proyek robotik dan mekanis yang menarik dan bermanfaat. Selalu perhatikan catu daya dan torsi yang dibutuhkan, terutama saat menggunakan servo pada aplikasi berat.</p>
+
+                  <h3>1. Inisialisasi dan Deklarasi Variabel</h3>
+    <p><code>#include &lt;IRremote.h&gt;</code><br>
+       <code>#include &lt;Servo.h&gt;</code><br>
+       <code>#include &lt;Wire.h&gt;</code><br>
+       <code>#include &lt;LiquidCrystal_I2C.h&gt;</code><br>
+       <code>LiquidCrystal_I2C lcd(0x27, 16, 2);</code> - Membuat objek LCD pada alamat I2C 0x27, ukuran 16x2.
+    </p>
+    <ul>
+      <li><b>IRremote</b>: Library untuk mengontrol penerima IR agar dapat menerima sinyal dari remote.</li>
+      <li><b>Servo</b>: Library untuk mengendalikan motor servo.</li>
+      <li><b>Wire</b> dan <b>LiquidCrystal_I2C</b>: Untuk mengontrol LCD dengan komunikasi I2C.</li>
+    </ul>
+
+    <h3>2. Definisi Pin</h3>
+    <p>Kode ini mendefinisikan pin-pin untuk komponen:</p>
+    <pre>
+      const int LED_HIJAU = 4;
+      const int LED_MERAH = 3;
+      const int LED_HIJAU1 = 2;
+      const int LED_HIJAU2 = 5;
+      const int LED_HIJAU3 = 6;
+      const int LED_HIJAU4 = 7;
+      const int IR_PIN = 12;
+      int rainsensor = A0;
+      int servoPin = 9;
+      int targetPos = 80;
+    </pre>
+    <ul>
+      <li>LED_HIJAU dan LED_MERAH: Untuk lampu indikator cuaca.</li>
+      <li>LED_HIJAU1 hingga LED_HIJAU4: Untuk mengontrol lampu taman.</li>
+      <li>IR_PIN: Untuk menerima sinyal IR dari remote.</li>
+      <li>rainsensor: Sensor hujan pada pin analog A0.</li>
+      <li>servoPin: Untuk mengendalikan motor servo pada pin 9.</li>
+    </ul>
+
+    <h3>3. Variabel Servo, IR Receiver, dan Nilai Sensor Hujan</h3>
+    <pre>
+      Servo myServo;
+      IRrecv irrecv(IR_PIN);
+      decode_results hasil;
+      int nilairain = 0;
+      int jumlah_air = 700;
+      int pos = 0;
+      int stepDelay = 20;
+    </pre>
+    <ul>
+      <li><b>myServo</b>: Objek untuk mengontrol gerakan servo.</li>
+      <li><b>irrecv</b>: Untuk menerima sinyal IR dari remote.</li>
+      <li><b>jumlah_air</b>: Nilai ambang batas deteksi hujan.</li>
+    </ul>
+
+    <h3>4. Fungsi setup()</h3>
+    <pre>
+      void setup() { 
+        Serial.begin(9600);
+        irrecv.enableIRIn();
+        myServo.attach(servoPin);
+        lcd.init();
+        lcd.backlight();
+        pinMode(LED_HIJAU, OUTPUT);
+        pinMode(LED_MERAH, OUTPUT);
+        pinMode(LED_HIJAU1, OUTPUT);
+        pinMode(LED_HIJAU2, OUTPUT);
+        pinMode(LED_HIJAU3, OUTPUT);
+        pinMode(LED_HIJAU4, OUTPUT);
+      }
+    </pre>
+    <ul>
+      <li><b>Serial.begin(9600)</b>: Memulai komunikasi serial untuk debugging.</li>
+      <li><b>irrecv.enableIRIn()</b>: Mengaktifkan penerima IR.</li>
+      <li><b>myServo.attach</b>: Menghubungkan servo pada pin yang ditentukan.</li>
+      <li><b>lcd.init()</b> dan <b>lcd.backlight()</b>: Menginisialisasi dan mengaktifkan backlight LCD.</li>
+      <li><b>pinMode</b>: Mengatur pin-pin untuk LED sebagai output.</li>
+    </ul>
+
+    <h3>5. Fungsi loop()</h3>
+    <p>Bagian utama yang berjalan berulang-ulang:</p>
+
+    <h5>a. Membaca Sensor Hujan</h5>
+    <pre>
+      nilairain = analogRead(rainsensor);
+      Serial.print("Nilai sensor: ");
+      Serial.println(nilairain);
+    </pre>
+    <p>Membaca nilai dari sensor hujan, dan mendeteksi hujan jika nilainya lebih rendah dari <code>jumlah_air</code> (700).</p>
+
+    <h5>b. Deteksi Hujan dan Pengaturan Servo</h5>
+    <pre>
+      if (nilairain < jumlah_air) { 
+        digitalWrite(LED_HIJAU, LOW);
+        digitalWrite(LED_MERAH, HIGH);
+        lcd.setCursor(0, 1);
+        lcd.print("Hujan datang bro");
+        delay(2000);
+        myServo.write(80);
+        delay(20);
+      }
+    </pre>
+    <p>Jika hujan terdeteksi, LED merah menyala dan pesan ditampilkan di LCD. Servo akan bergerak ke posisi 80 untuk menutup atap.</p>
+
+    <h5>c. Mengatur Remote IR</h5>
+    <pre>
+      if (irrecv.decode(&hasil)) {
+        if(hasil.value == 16724175) {
+          // Membuka atap, nyalakan LED hijau
+        } else if(hasil.value == 16718055) {
+          // Menutup atap, nyalakan LED merah
+        } else if(hasil.value == 16743045) {
+          // Nyalakan lampu taman
+        } else if(hasil.value == 16716015) {
+          // Matikan lampu taman
+        }
+        irrecv.resume();
+      }
+    </pre>
+    <ul>
+      <li><b>irrecv.decode</b>: Mendeteksi sinyal dari remote control.</li>
+      <li><b>hasil.value</b>: Menyimpan kode sinyal. Beberapa kode:
+        <ul>
+          <li><code>16724175</code>: Membuka atap dan menyalakan LED hijau.</li>
+          <li><code>16718055</code>: Menutup atap dan menyalakan LED merah.</li>
+          <li><code>16743045</code>: Menyalakan lampu taman.</li>
+          <li><code>16716015</code>: Mematikan lampu taman.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h5>6. Menampilkan Pesan di LCD</h5>
+    <pre>
+      lcd.setCursor(0, 1);
+      lcd.print("Hujan datang bro");
+    </pre>
+    <p>Menampilkan pesan agar pengguna mengetahui bahwa hujan telah terdeteksi.</p>
+
+    <h3>Kesimpulan</h3>
+    <p>Program ini mengontrol kondisi atap dan lampu secara otomatis atau manual dengan fitur utama:</p>
+    <ul>
+      <li><b>Sensor Hujan</b>: Menutup atap secara otomatis jika hujan.</li>
+      <li><b>Servo Motor</b>: Mengontrol pergerakan atap.</li>
+      <li><b>Remote IR</b>: Kontrol manual untuk membuka/menutup atap dan mengatur lampu taman.</li>
+      <li><b>LCD</b>: Menampilkan status sistem.</li>
+    </ul>
+    <h3>Project akhir p5</h3>
+    <img src="project p5.jpg" alt="" class="image-artikel">
+    <h3 style="margin-top: 50px;"> cuplikan Codingan project P5 </h3>
+    <img src="codingan-p5.png" alt="" class="image-artikel">
+
+                </div>
+              </div>
+            
+       
+        
+              <!-- Kolom Kartu Samping -->
+             <!-- Kolom Kartu Samping -->
+<div class="col-md-4">
+    <!-- Kartu 1 -->
+    <div class="article-card">
+        <a href="servo.html">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.olRuYIlpZkGupjc3u_lCpwHaFj&pid=Api&P=0&h=180" alt="Article Image 1" class="article-card-img">
+        </a>
+        <div class="article-card-body">
+            <h5 class="article-card-title">Project Servo</h5>
+            <p class="article-card-text">
+              servo adalah sebuah motor yang dapat mengubah sudut gerakannya dengan menggunakan sinyal digital
+            </p>
+        </div>
+    </div>
+
+    <!-- Kartu 2 -->
+    <div class="article-card">
+        <a href="buzzer.html">
+            <img src="https://www.flyrobo.in/image/cache/catalog/product2/SKU125754b-1000x1000.JPG" alt="Article Image 2" class="article-card-img">
+        </a>
+        <div class="article-card-body">
+            <h5 class="article-card-title">Project Buzzer</h5>
+            <p class="article-card-text">
+               buzzer adalah sebuah perangkat yang dapat mengeluarkan suara dengan menggunakan sinyal digital
+            </p>
+        </div>
+    </div>
+
+    <!-- Kartu 3 -->
+    <div class="article-card">
+        <a href="p5.html">
+            <img src="project p5.jpg" alt="Article Image 3" class="article-card-img">
+        </a>
+        <div class="article-card-body">
+            <h5 class="article-card-title">Project p5</h5>
+            <p class="article-card-text">
+               project p5 kami membuat jemuran otomatis dengan menggunakan komponen arduino seperti servo,arduino,lampu,rain drop sensor
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+
+        
+       
+    </section>
+
+
+      <!-- Footer -->
+      <footer class="bg-dark text-light pt-5" style="font-size: 18px;">
+        <div class="container">
+          <div class="row" style="justify-content: space-between;">
+            <div class="col-md-2 mb-4 text-center">
+              <img src="logo-smanda.png" alt="Logo Perusahaan" class="footer-logo" />
+            </div>
+            <!-- About Section -->
+            <div class="col-md-5 mb-4">
+              <h5>Tentang Web</h5>
+              <p>Website ini dibuat untuk membagikan informasi dan tutorial mengenai proyek Arduino. Dengan berbagai panduan dan contoh proyek interaktif, kami berharap dapat membantu pengguna memahami dasar-dasar elektronika dan pemrograman dengan mudah.</p>
+            </div>
+            <!-- Links Section -->
+            <div class="col-md-2 mb-4">
+              <h5>Sosial media</h5>
+              <ul class="list-unstyled">
+                <li><a href="https://www.instagram.com/sheva_arzaa?igsh=a3F6M2ZxaTZwbXN6" class="text-light text-footer"><i class="fab fa-instagram social-icon"></i> Instagram</a></li>
+                <li><a href="https://www.facebook.com/" class="text-light text-footer"><i class="fab fa-facebook social-icon"></i> Facebook</a></li>
+                <li><a href="https://open.spotify.com/preferences" class="text-light text-footer"><i class="fab fa-spotify social-icon"></i> Spotify</a></li>
+                <li><a href="https://www.tiktok.com/@shevaarza?_r=1&_d=ee8lj2g013mmh1&sec_uid=MS4wLjABAAAA9WjL38HFa6RcIqxF4XGNPUpWEf8WfGWnFTdvsjzh_IqDDGRWEO_KgYxPP_1BeY6x&share_author_id=6833301590268609537&sharer_language=id&source=h5_t&u_code=dcigm4fg6mg423&timestamp=1731485092&user_id=6833301590268609537&sec_user_id=MS4wLjABAAAA9WjL38HFa6RcIqxF4XGNPUpWEf8WfGWnFTdvsjzh_IqDDGRWEO_KgYxPP_1BeY6x&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7434992061218064184&share_link_id=db31e1c4-fcda-47f4-a0b7-6117dc4c9093&share_app_id=1180&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb0229&social_share_type=5&enable_checksum=1 " class="text-light text-footer"><i class="fab fa-tiktok social-icon"></i> TikTok</a></li>
+              </ul>
+            </div>
+            <!-- Contact Section -->
+            <div class="col-md-3 mb-4">
+              <h5>Contact me</h5>
+              <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/tVSCQST2fzykBanC9" target="_blank" class="footer-link"> JL. Raya Ijen N. 09, Wates, Kec. Magersari, Kota Mojokerto</a ></p>
+              <p><i class="fas fa-envelope"></i> <a href="mailto:localculturess@gmail.com" class="footer-link">Shevaarza.com</a></p>
+              <p><i class="fas fa-phone"></i> <a href="https://wa.me//6282336432276" target="_blank" class="text-light text-footer">Contact telepon</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+.

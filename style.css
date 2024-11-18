@@ -1,0 +1,374 @@
+body {
+  background-color: #2c2f33; /* Warna abu-abu gelap tidak terlalu gelap */
+  color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+/* Style untuk Background Video */
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Posisikan di belakang konten */
+}
+
+.hero {
+  position: relative;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+ 
+  overflow: hidden;
+}
+
+  
+  .hero h1 {
+    margin-top: 180px;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+  }
+  
+  /* Navbar style */
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .navbar .nav-link {
+    color: white !important;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .navbar-brand {
+    color: white !important;
+    font-size: 35px;
+  }
+  
+  .navbar-toggler {
+    border-color: white;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  .nav-btn {
+    background-color: #ff5722;
+    color: white;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .nav-btn:hover {
+    background-color: #e64a19;
+  }
+
+  /* Gaya khusus untuk dropdown */
+.dropdown-menu.custom-dark {
+  background-color: #343a40; /* Warna latar belakang gelap */
+  color: #ffffff;            /* Warna teks terang */
+}
+
+.dropdown-menu.custom-dark .dropdown-item {
+  color: #ffffff;
+}
+
+.dropdown-menu.custom-dark .dropdown-item:hover {
+  background-color: #495057; /* Warna saat item di-hover */
+}
+
+
+
+  /* Responsif untuk layar kecil */
+@media (max-width: 576px) {
+    /* Hero section di layar kecil */
+    .hero h1 {
+        font-size: 2.5rem; /* Mengurangi ukuran font pada layar kecil */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Mengurangi ukuran font pada deskripsi */
+    }
+
+    /* Navbar brand ukuran lebih kecil */
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    /* Navbar link ukuran lebih kecil */
+    .navbar .nav-link {
+        font-size: 1rem;
+    }
+
+    /* Tombol navigasi ukuran lebih kecil */
+    .nav-btn {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero section padding agar tidak terlalu rapat */
+    .hero {
+        padding: 20px;
+    }
+}
+
+
+
+
+/* image about */
+
+
+
+.custom-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  .custom-card:hover {
+    transform: translateY(-5px);
+  }
+  .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+/* motivasi image */
+
+.anime-image {
+  /* Membuat gambar berbentuk lingkaran */ /* Menambahkan bayangan lembut */
+  width: 230px;                         /* Mengatur ukuran lebar gambar */
+  height: 230px;                        /* Mengatur ukuran tinggi gambar agar proporsional */
+  object-fit: cover;                    /* Memastikan gambar tidak terdistorsi */
+  transition: transform 0.3s ease;  
+  margin-bottom: 15px;  
+  margin-top: 10px;  
+}
+
+.erza-image:hover {
+  transform: scale(1.05);               /* Memperbesar sedikit saat di-hover */
+}
+
+/* card */
+
+/* Style untuk card */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  background-color: #2f2f2f;
+}
+
+/* Efek hover pada card */
+
+
+/* Gambar dalam card */
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+  height: 150px;
+  transition: all 0.3s ease;
+}
+
+/* Efek dark pada gambar */
+
+/* Hover efek pada gambar agar tampak lebih angker */
+
+
+/* Font style untuk judul card */
+.card-title {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #F5F5F7;
+}
+
+/* Font style untuk teks card */
+.card-text {
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  color: #B7B7B7;
+}
+
+.card-artikel-samping{
+ border-radius: 15px  ;
+  object-fit: cover;
+  height: 180px;
+  width: 250px;
+  transition: all 0.3s ease;
+    margin-left: 15px;
+}
+
+
+
+  /* footer. */
+
+  .services-section h2 {
+    color: #6BBE45; /* Green color for the "Features Services" */
+  }
+  
+  .service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-icon {
+    width: 50px;
+  }
+  
+  .service-link {
+    color: #6BBE45;
+    font-size: 1.5rem;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+  
+  .service-link:hover {
+    color: #1D8439;
+  }
+  footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  .text-footer{
+    text-decoration: none;
+  }
+  .footer-logo {
+    max-width: 144px; /* Atur ukuran maksimum logo */
+    height: auto;     /* Pastikan proporsi logo tetap */
+    margin-bottom: 20px; /* Ruang di bawah logo */
+    margin-left: 30px;
+    margin-top: -12px;
+}
+
+  
+  .social-icons a {
+    font-size: 1.25rem;
+    margin-right: 10px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #6BBE45;
+  }
+
+
+  .social-icon {
+    color: #ffffff;
+    font-size: 23px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin: 5px;
+  }
+  /* Spasi untuk teks link */
+  .text-footer {
+    padding-left: 10px;
+  }
+
+
+
+  
+  footer .form-control {
+    border-radius: 30px;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .footer-link {
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: #ffffff; /* Warna link diatur menjadi putih (atau warna terang) */
+    transition: color 0.3s ease; /* Menambahkan transisi halus pada perubahan warna */
+}
+
+.footer-link:hover {
+    color: #ddd; /* Ubah warna saat link di-hover menjadi abu-abu terang */
+}
+
+.footer-link:active {
+    color: #bbb; /* Saat link diklik, warnanya akan sedikit lebih gelap */
+}
+
+.footer-link:focus {
+    outline: none; /* Menghilangkan outline saat link mendapat fokus */
+    color: #ddd; /* Warnanya tetap berubah saat fokus */
+}
+
+
+
+.bg-light {
+    background-color: #3c3f43 !important; /* Warna abu-abu lebih terang */
+    color: white;
+}
+
+.text-light {
+    color: #f1f1f1 !important;
+}
+
+
+
+
+/* responsif untuk bagian about web  hand phone */
+
+.about-image, .anime-image {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain; /* Menjaga proporsi gambar */
+}
+
+/* Tambahan media query untuk screen kecil */
+@media (max-width: 576px) {
+  .about-image, .anime-image {
+    max-width: 60%; /* Membatasi lebar gambar agar tidak pecah */
+  }
+  .display-4 {
+    font-size: 1.8rem;
+  }
+  .fs-5 {
+    font-size: 0.9rem;
+  }
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+
+
+/* responsif untuk card card */
+
+
+.card {
+  height: 100%;
+}
+/* Tambahan margin bawah untuk spasi antar elemen di layar kecil */
+@media (max-width: 576px) {
+  .col-6 {
+      margin-bottom: 20px;
+  }
+}
